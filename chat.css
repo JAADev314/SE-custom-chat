@@ -1,0 +1,127 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css');
+@import url('https://fonts.googleapis.com/css?family={{fontName}}');
+
+* {
+    font-family: '{{fontName}}', sans-serif;
+    color: {{fontColor}};
+    overflow: hidden;
+    font-weight: {{fontWeight}};
+    text-shadow:{textShadow};
+}
+
+.main-container{
+    display:{{alignMessages}};
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    align-content: flex-start;
+    height:98%;
+    margin-bottom:10px;
+    box-sizing: border-box;
+    background-color: {{backgroundColor}};
+}
+
+.message-row{
+    flex: 0 0 auto;
+    width:100%;
+    /* background-color:{{backgroundColor}};  */
+    padding:5px;
+    vertical-align: baseline;
+}
+
+.badge{
+    display:{{displayBadges}};
+    height:{{fontSize}}px;
+}
+
+.user-box{
+    display:inline;
+    font-size:{{fontSize}}px;
+}
+
+.user-box > span{
+    font-size:{{fontSize}}px;
+}
+.user-box > .user-name{
+    font-weight: bold;
+}
+
+.user-message{
+    display:inline;
+    font-size:{{fontSize}}px;
+    word-wrap: break-word;
+}
+
+.emote{
+    height: {emoteSize}px;
+    vertical-align: middle;
+    background-repeat:no-repeat;
+}
+
+.action{
+    font-style: italic;
+}
+
+@keyframes terminalEnter {
+    from {
+        opacity: 0;
+        transform: translateX(-12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* https://codepen.io/zachkrall/pen/MWWGMPx */
+.modified {
+    --anim-move: none;
+    --anim-color: none;
+    --anim-scale: none;
+    --anim-rotate: none;
+
+    animation:
+        var(--anim-move),
+        var(--anim-color),
+        var(--anim-scale),
+        var(--anim-rotate);
+    position: relative;
+    top: 0;
+    left:0
+}
+
+.wave {
+    --anim-move: wavy 1.3s infinite;
+}
+
+.rainbow {
+    --anim-color: rainbow 5s infinite;
+}
+
+@keyframes wavy {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -15px;
+  }
+  100% {
+    top: 0px;
+  }
+
+}
+@keyframes rainbow {
+    0%{color: orange;}  
+    10%{color: purple;} 
+    20%{color: red;}
+    30%{color: CadetBlue;}
+    40%{color: yellow;}
+    50%{color: coral;}
+    60%{color: green;}
+    70%{color: cyan;}
+    80%{color: DeepPink;}
+    90%{color: DodgerBlue;}
+    100%{color: orange;}
+
+}
